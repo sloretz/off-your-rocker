@@ -2,7 +2,7 @@
 Off Your Rocker
 ===============
 
-This adds extensions for `tfoote/rocker<https://github.com/tfoote/rocker>`_.
+This adds extensions for `tfoote/rocker <https://github.com/tfoote/rocker>`_.
 
 Extensions
 ^^^^^^^^^^
@@ -22,7 +22,7 @@ The last path must be terminated with two slashes -- before the image name.
 Colcon
 ::::::
 
-This adds `colcon<https://colcon.readthedocs.io>`_ to the docker image.
+This adds `colcon <https://colcon.readthedocs.io>`_ to the docker image.
 
 ::
 
