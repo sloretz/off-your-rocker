@@ -26,7 +26,7 @@ This adds `colcon <https://colcon.readthedocs.io>`_ to the docker image.
 
 ::
 
-    rocker --oyr-colcon -- ubuntu:18.04
+    rocker --oyr-colcon ubuntu:18.04
 
 Spacenav
 ::::::::
@@ -34,4 +34,4 @@ This adds support for a 3Dconnexion SpaceNavigator and allows the docker contain
 
 ::
 
-    rocker --oyr-spacenav -- ubuntu:18.04
+    rocker --oyr-spacenav ubuntu:18.04
