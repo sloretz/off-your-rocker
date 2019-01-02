@@ -14,8 +14,9 @@ setup(
     ],
     entry_points={
         'rocker.extensions': [
-            'colcon = off_your_rocker.colcon:Colcon',
-            'spacenav = off_your_rocker.spacenav:SpaceNav',
+            'oyr_colcon = off_your_rocker.colcon:Colcon',
+            'oyr_spacenav = off_your_rocker.spacenav:SpaceNav',
+            'oyr_mount = off_your_rocker.mount:Mount',
         ]
     }
 )
