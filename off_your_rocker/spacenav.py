@@ -15,11 +15,6 @@ class SpaceNav(RockerExtension):
     def precondition_environment(self, cli_args):
         pass
 
-    def validate_environment(self, cli_args):
-        """Check if spacenav is installed."""
-        if not os.path.exists('/var/run/spnav.sock'):
-            raise RuntimeError("Spacenav is not installed")
-
     def get_preamble(self, cli_args):
         return ''
 
@@ -30,8 +25,9 @@ class SpaceNav(RockerExtension):
         return em.expand(snippet)
 
     def get_docker_args(self, cli_args):
-        # TODO rocker to add leading space
-        return ' -v /var/run/spnav.sock:/var/run/spnav.sock'
+        if os.path.exists('/var/run/spnav.sock'):
+            return ' -v /var/run/spnav.sock:/var/run/spnav.sock'
+        return ''
 
     @staticmethod
     def register_arguments(parser):
