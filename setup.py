@@ -17,6 +17,8 @@ setup(
             'oyr_colcon = off_your_rocker.colcon:Colcon',
             'oyr_spacenav = off_your_rocker.spacenav:SpaceNav',
             'oyr_mount = off_your_rocker.mount:Mount',
+            'oyr_cap_add = off_your_rocker.capabilities:CapAdd',
+            'oyr_cap_drop = off_your_rocker.capabilities:CapDrop',
         ]
     }
 )

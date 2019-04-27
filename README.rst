@@ -35,3 +35,12 @@ This adds support for a 3Dconnexion SpaceNavigator and allows the docker contain
 ::
 
     rocker --oyr-spacenav ubuntu:18.04
+
+Capabilities
+::::::::
+Two plugins add support for adding or droping runtime linux capabilities.
+For more information see [docker run --cap-add and --cap-drop documentation](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities).
+
+::
+
+    rocker --oyr-cap-add SYS_PTRACE --ory-cap-drop ALL ubuntu:18.04
