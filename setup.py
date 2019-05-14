@@ -10,7 +10,7 @@ setup(
     description='Plugins for rocker that I find useful',
     license='Apache 2.0',
     install_requires=[
-        # 'git+https://github.com/tfoote/rocker.git',
+        'rocker',
     ],
     entry_points={
         'rocker.extensions': [
@@ -19,6 +19,7 @@ setup(
             'oyr_mount = off_your_rocker.mount:Mount',
             'oyr_cap_add = off_your_rocker.capabilities:CapAdd',
             'oyr_cap_drop = off_your_rocker.capabilities:CapDrop',
+            'oyr_run_arg = off_your_rocker.run_arg:RunArg',
         ]
     }
 )
