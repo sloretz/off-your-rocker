@@ -44,3 +44,11 @@ For more information see [docker run --cap-add and --cap-drop documentation](htt
 ::
 
     rocker --oyr-cap-add SYS_PTRACE --ory-cap-drop ALL ubuntu:18.04
+
+Docker Run args
+::::::::
+This allows adding arbitray arguments to docker run.
+
+::
+
+    rocker --oyr-run-arg " --label foo=bar" ubuntu:18.04
