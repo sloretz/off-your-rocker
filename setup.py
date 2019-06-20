@@ -1,5 +1,8 @@
 from setuptools import setup
 
+with open("README.rst", "r") as fin:
+    long_description = fin.read()
+
 setup(
     name='off-your-rocker',
     version='0.1.0',
@@ -7,7 +10,10 @@ setup(
     package_data={'off_your_rocker': ['templates/*.em']},
     author='Shane Loretz',
     author_email='shane.loretz@gmail.com',
-    description='Plugins for rocker that I find useful',
+    description='Extra plugins for rocker',
+    long_description=long_description,
+    long_description_content_type="text/x-rst",
+    url="https://github.com/sloretz/off-your-rocker",
     license='Apache 2.0',
     install_requires=[
         'rocker',
