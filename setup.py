@@ -1,6 +1,6 @@
 from setuptools import setup
 
-with open("README.rst", "r") as fin:
+with open("README.md", "r") as fin:
     long_description = fin.read()
 
 setup(
@@ -26,6 +26,7 @@ setup(
             'oyr_cap_add = off_your_rocker.capabilities:CapAdd',
             'oyr_cap_drop = off_your_rocker.capabilities:CapDrop',
             'oyr_run_arg = off_your_rocker.run_arg:RunArg',
+            'oyr_bind = off_your_rocker.bind:Bind',
         ]
     }
 )
