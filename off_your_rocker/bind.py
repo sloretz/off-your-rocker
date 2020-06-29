@@ -37,9 +37,11 @@ class Bind(RockerExtension):
         return ' '.join(args)
 
     @staticmethod
-    def register_arguments(parser):
+    def register_arguments(parser,defaults={}):
         parser.add_argument('--oyr-bind',
             metavar='PATH',
             type=str,
             nargs='+',
-            help='mount local foldrs to arbitrary folders in container. Sintax: /host_path[:/container_path]. If container path is not given, same path will be used. Multiple directories can be separated by space.')
+            help='mount local foldrs to arbitrary folders in container. Sintax: /host_path[:/container_path]. If container path is not given, same path will be used. Multiple directories can be separated by space.',
+            default=None
+            )

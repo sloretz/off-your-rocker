@@ -29,7 +29,7 @@ class CapAdd(RockerExtension):
         return ' '.join(args)
 
     @staticmethod
-    def register_arguments(parser):
+    def register_arguments(parser,defaults={}):
         parser.add_argument('--oyr-cap-add',
             metavar='CAPABILITY',
             type=str,
@@ -64,7 +64,7 @@ class CapDrop(RockerExtension):
         return ' '.join(args)
 
     @staticmethod
-    def register_arguments(parser):
+    def register_arguments(parser,defaults={}):
         parser.add_argument('--oyr-cap-drop',
             metavar='CAPABILITY',
             type=str,

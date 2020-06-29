@@ -29,7 +29,7 @@ class RunArg(RockerExtension):
         return ' '.join(args)
 
     @staticmethod
-    def register_arguments(parser):
+    def register_arguments(parser,defaults={}):
         parser.add_argument('--oyr-run-arg',
             metavar='DOCKER_RUN_ARG',
             type=str,
