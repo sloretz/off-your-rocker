@@ -25,11 +25,10 @@ class Mount(RockerExtension):
     def get_docker_args(self, cli_args):
         args = ['']
         for mount in cli_args['oyr_mount']:
-            mount = os.path.abspath(mount)
             mount_args = mount.split(':')
             if len(mount_args) == 1:
                 src_and_dst, = mount_args
-                arg = '{0}:{0}'.format(src_and_dst)
+                arg = '{0}:{0}'.format(os.path.abspath(src_and_dst))
             elif len(mount_args) == 2:
                 src, dst = mount_args
                 arg = '{src}:{dst}'.format(src=src, dst=dst)
