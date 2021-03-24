@@ -20,7 +20,7 @@ For example:
 
     rocker --oyr-mount ~/.vimrc ~/.bashrc -- ubuntu:18.04
 
-Or use the colon syntax for ``Docker volumes <https://docs.docker.com/storage/volumes/#choose-the--v-or---mount-flag>``_.
+Or use the colon syntax for `Docker volumes <https://docs.docker.com/storage/volumes/#choose-the--v-or---mount-flag>`_.
 This includes the ability to specify comma separated options, such as ``ro`` for readonly.
 This syntax supports the use of named volumes, which must first be created (for example, with ``docker volume create``)
 
