@@ -26,7 +26,20 @@ class Mount(RockerExtension):
         args = ['']
         for mount in cli_args['oyr_mount']:
             mount = os.path.abspath(mount)
-            args.append('-v {0}:{0}'.format(mount))
+            mount_args = mount.split(':')
+            if len(mount_args) == 1:
+                src_and_dst, = mount_args
+                arg = '{0}:{0}'.format(src_and_dst)
+            elif len(mount_args) == 2:
+                src, dst = mount_args
+                arg = '{src}:{dst}'.format(src=src, dst=dst)
+            elif len(mount_args) == 3:
+                src, dst, permissions = mount_args
+                arg = '{src}:{dst}:{permissions}'.format(
+                    src=src, dst=dst, permissions=permissions)
+            else:
+                raise ValueError("Invalid mount string: '{0}'".format(mount))
+            args.append('-v {0}'.format(arg))
         return ' '.join(args)
 
     @staticmethod
