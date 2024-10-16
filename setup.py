@@ -5,7 +5,7 @@ with open("README.rst", "r") as fin:
 
 setup(
     name='off-your-rocker',
-    version='0.1.0',
+    version='0.1.1',
     packages=['off_your_rocker'],
     package_data={'off_your_rocker': ['templates/*.em']},
     author='Shane Loretz',
