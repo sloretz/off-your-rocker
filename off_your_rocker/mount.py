@@ -30,7 +30,7 @@ class Mount(RockerExtension):
         return ' '.join(args)
 
     @staticmethod
-    def register_arguments(parser):
+    def register_arguments(parser, defaults):
         parser.add_argument('--oyr-mount',
             metavar='PATH',
             type=str,

@@ -30,7 +30,7 @@ class SpaceNav(RockerExtension):
         return ''
 
     @staticmethod
-    def register_arguments(parser):
+    def register_arguments(parser, defaults):
         parser.add_argument('--oyr-spacenav',
             action='store_true',
             help='enable 3Dconnexion SpaceNavigator in container')

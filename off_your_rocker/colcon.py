@@ -30,7 +30,7 @@ class Colcon(RockerExtension):
         return ''
 
     @staticmethod
-    def register_arguments(parser):
+    def register_arguments(parser, defaults):
         parser.add_argument('--oyr-colcon',
             action='store_true',
             help='install colcon with some useful extensions')
