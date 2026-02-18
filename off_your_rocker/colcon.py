@@ -11,15 +11,6 @@ class Colcon(RockerExtension):
     def get_name(cls):
         return cls.name
 
-    def precondition_environment(self, cli_args):
-        pass
-
-    def validate_environment(self, cli_args):
-        pass
-
-    def get_preamble(self, cli_args):
-        return ''
-
     def get_snippet(self, cli_args):
         snippet = pkgutil.get_data(
             'off_your_rocker',

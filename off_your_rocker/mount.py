@@ -10,18 +10,6 @@ class Mount(RockerExtension):
     def get_name(cls):
         return cls.name
 
-    def precondition_environment(self, cli_args):
-        pass
-
-    def validate_environment(self, cli_args):
-        pass
-
-    def get_preamble(self, cli_args):
-        return ''
-
-    def get_snippet(self, cli_args):
-        return ''
-
     def get_docker_args(self, cli_args):
         args = ['']
         for mount in cli_args['oyr_mount']:
